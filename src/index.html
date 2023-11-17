@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Project Name</title>
-</head>
-<html lang="en-US">
-<head>
+  <title>Currency Exchanger</title>
 </head>
 <body>
-  <div>Hello world!</div>
-  <img src="./assets/images/this-is-an-example.jpg" alt="example!"/>
+  <div class="container">
+    <h1>$$$---Currency---Exchanger---$$$</h1>
+    <p>See an input of USD converted to any currency type</p>
+    <p>Type in any 3 letter currency code and any amount to see your USD converted to the input currency</p>
+    <p>Here are some examples:</p>
+    <pre>
+      For country code:
+      Currency: AED (for Emirati Dirham from UAE)
+      Currency: AFN (for Afghan Afghani from Afhganistan)
+      Currency: ALL (for Albanian Lek from Albania)
+      For amount in US Dollars
+      Amount in USD: 10.00   (for ten United States dollars)
+      Amount in USD: .50     (for fifty United States cents)
+      Amount in USD: 1000000 (for one million United States dollars)
+    </pre>
+    <p1>for a list of all major international country currency codes please click provided the link:</p1>
+  <p><a href="https://www.iban.com/currency-codes">IBAN country currency codes</a></p>
+    <form>
+      <label for="type">Enter a 3 Letter country code:</label>
+      <input id="type" type="text" minlength="3" maxlength="3" style="text-transform: uppercase" currency-type"><br>
+      <label for="amount">Enter an amount in US Dollars with integers:</label>
+      <input id="amount" type="number" min=".01" step =".01" name="amount"><br>
+      <button type="submit" class="btn-success" id="submit-results">See your results</button>
+    </form>
+    <p id="show-results"></p>
+  </div>
 </body>
-</html>
-
-
 </html>
