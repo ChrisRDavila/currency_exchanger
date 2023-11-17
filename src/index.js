@@ -25,8 +25,8 @@ function useInput(response, type, amount) {
     document.querySelector('#type').value = null;
     document.querySelector('#amount').value = null;
   } else { 
-    document.querySelector("#show-results").innerHTML = `<p>Your exchange from ${response[1]}$ USD<p>
-    <p>in ${response[2]} equals ${resultAmount}<p>`;
+    document.querySelector("#show-results").innerHTML = `<p>Your exchange from ${amount}$ USD<p>
+    <p>in ${type} equals ${resultAmount}<p>`;
     document.querySelector('#type').value = null;
     document.querySelector('#amount').value = null;
   }  
