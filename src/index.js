@@ -32,8 +32,8 @@ function printElements(response, amount, type, resultAmount) {
     document.querySelector('#type').value = null;
     document.querySelector('#amount').value = null;
   } else { 
-    document.querySelector("#show-results").innerHTML = `<p>Your exchange from ${amount}$ USD<p>
-    <p>in ${type} equals ${resultAmount}<p>`;
+    document.querySelector("#show-results").innerHTML = `<p>When you exchange ${amount}$ in USD<p>
+    <p>You will get back ${resultAmount}$ in ${type}<p>`;
     document.querySelector('#type').value = null;
     document.querySelector('#amount').value = null;
   }  

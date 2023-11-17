@@ -5,42 +5,53 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 200vh;
+  height: 170vh;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 150%;
   padding: 10px;
-  margin: 5px;
+  margin: 10px;
 }
 .container {
   background-color: aliceblue;
   opacity: .75;
-  border-radius: 12px;
+  border-radius: 50px;
   border-color: rgb(6, 4, 1);
   border: 10px;
-  padding: 15px;
-  margin: 15px;
-  align-items: center;
-  
-
+  padding: 20px;
+  margin: 10px;
+  align-items: left;
 }
 #submit-results {
   background-color: blueviolet;
   color: rgb(20, 220, 90);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 p1 {
   color: red;
+  font-size: 75%;
 }
 h1 {
   color: chartreuse;
   text-align: center;
+  background-color: black;
+  border-radius: 100px;
 }
 pre {
   color: black;
   font-style: unset;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 75%;
+  font-size: 60%;
+  background-color: bisque;
+}
+
+#show-results {
+  background-color: brown;
+  color: tan;
+  border-radius: 9px;
+  font-size: 120%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
