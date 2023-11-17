@@ -58,7 +58,7 @@ function handleFormSubmission(event) {
   event.preventDefault();
   const type = document.querySelector('#type').value.toUpperCase(); 
   const amount = document.querySelector('#amount').value;
-  getRates(amount, type);
+  getRates(type, amount);
 }
 
 window.addEventListener("load", function() {
