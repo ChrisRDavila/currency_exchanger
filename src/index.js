@@ -5,27 +5,23 @@ import Exchange from "./sevices/Exchange-service";
 
 //business Logic
 
-function getRates(amount, type) {
-  Exchange.getExchangeAPI(amount, type)
+function getRates(type, amount) {
+  Exchange.getExchangeAPI(type, amount)
     .then(function(response) {
       if (response.result) {
-        printElements(response, amount, type);
+        useInput(response, type, amount)
+        // printElements(response, amount, type);
       } else {
-        printError(response, amount, type);
+        printError(response);
       }
     });
 }
 
-// UI Logic
-
-function printElements(response) {
-  const amount = document.querySelector('#amount').value;
-  const type = document.querySelector('#type').value.toUpperCase();
-  const rates = response[0];
-  const resultRate = rates.conversion_rates[type];
+function useInput(response, type, amount) {
+  const resultRate = response.conversion_rates[type];
   const resultAmount  = (resultRate * amount).toFixed(2);
-  if (rates.conversion_rates[type] === undefined) {
-    document.querySelector('#show-results').innerText = `${response[2]} is not a real country code`;
+  if (response.conversion_rates[type] === undefined) {
+    document.querySelector('#show-results').innerText = `${type} is not a real country code`;
     document.querySelector('#type').value = null;
     document.querySelector('#amount').value = null;
   } else { 
@@ -36,13 +32,31 @@ function printElements(response) {
   }  
 }
 
+// UI Logic
+
+// function printElements(response) {
+//   const rates = response[0];
+//   const resultRate = rates.conversion_rates[type];
+//   const resultAmount  = (resultRate * amount).toFixed(2);
+//   if (rates.conversion_rates[type] === undefined) {
+//     document.querySelector('#show-results').innerText = `${response[2]} is not a real country code`;
+//     document.querySelector('#type').value = null;
+//     document.querySelector('#amount').value = null;
+//   } else { 
+//     document.querySelector("#show-results").innerHTML = `<p>Your exchange from ${response[1]}$ USD<p>
+//     <p>in ${response[2]} equals ${resultAmount}<p>`;
+//     document.querySelector('#type').value = null;
+//     document.querySelector('#amount').value = null;
+//   }  
+// }
+
 function printError(error) {
   document.querySelector('#show-results').innerText = `There was an error accessing the data from exchange rate API ${error}`;
 }
 
 function handleFormSubmission(event) {
   event.preventDefault();
-  const type = document.querySelector('#type').value; 
+  const type = document.querySelector('#type').value.toUpperCase(); 
   const amount = document.querySelector('#amount').value;
   getRates(amount, type);
 }
