@@ -24,9 +24,9 @@
   <p><a href="https://www.iban.com/currency-codes">IBAN country currency codes</a></p>
     <form>
       <label for="type">Enter a 3 Letter country code:</label><br>
-      <input id="type" type="text" minlength="3" maxlength="3" style="text-transform: uppercase" currency-type"><br>
+      <input id="type" type="text" minlength="3" maxlength="3" style="text-transform: uppercase" currency-type" required><br>
       <label for="amount">Enter an amount in US Dollars with integers:</label><br>
-      <input id="amount" type="number" min=".01" step =".01" name="amount"><hr>
+      <input id="amount" type="number" min=".01" step =".01" name="amount" required><hr>
         <button type="submit" class="btn-success" id="submit-results">See results</button>
     </form>
     <p id="show-results"></p>
