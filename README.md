@@ -1,8 +1,8 @@
-# (Application Name)
+# Currency Exchanger
 
-#### (Brief Description of Application)
+#### Converts input USD amount to chosen country currency
 
-#### By (Your Name Here)
+#### By Christopher Davila
 
 ## Technologies Used
 
@@ -10,29 +10,18 @@
 * _npm_
 * _html_
 * _javascript_
-* _jist_
 * _API_
+* _file loader_
+* _css loader_
+* _dotenv key file loader_
 
 
 ## Description
+This Application has inputs that will allow the user to choose a country based on a country code and a US dollar amount based on input and see what the input amount in US Dollars would be worth in the currency of the choosen country
 
 ## Setup/Installation Requirements
 
-* _set up .env file withkey named API key_
-* _if API needs key run $ npm install dotenv-webpack@2.0.0 --save-dev to use the key from .env file, name key_
-* _npm install --save-dev style-loader css-loader_
-* _Installing all packages with $ npm install._
-* _Building the project using webpack with $ npm run build_
-* _Starting a development server with $ npm run start_
-* _Linting JS files in the src folder with $ npm run lint_
-* _Running tests with Jest using $ npm run test_
-* _npm run deploy to build project and publish to GH Pages_
-* -APi set up/use_
-
-## Known Bugs
-
-* _Any known issues_
-* _should go here_
-
-## License
-[MIT](https://yourlicesnepage)
+* _1. Clone file from repository using `\$ git clone https://github.com/ChrisRDavila/currency_exchanger.git`._
+* _2. Add .env file to project for secure storage, make sure not to push .env file repository (see step 4)_
+* _3. Sign up for account with free key at [ExchangeRate-API](https://www.exchangerate-api.com/docs/overview), to get access to personal API Key_
+* _4. Add .env to .gitignore file and make sure to commit .gitignore with all necesary files, before any other 
