@@ -27,7 +27,7 @@ function useInput(response, type, amount) {
 
 function printElements(response, amount, type, resultAmount) {
   if (response.conversion_rates[type] === undefined) {
-    document.querySelector('#show-results').innerText = `${type} is not a real country code, please refer to the IBAN country code link above`;
+    document.querySelector('#show-results').innerText = `${type} is not a real country code, please refer to the IBAN country code link above.`;
     document.querySelector('#type').value = null;
     document.querySelector('#amount').value = null;
   } else { 
@@ -39,7 +39,7 @@ function printElements(response, amount, type, resultAmount) {
 }
 
 function printError(error) {
-  document.querySelector('#show-results').innerText = `There was an error accessing the data from exchange rate API
+  document.querySelector('#show-results').innerText = `There was an error accessing the data from ExchangeRate-API.
   ${error}`;
 }
 
