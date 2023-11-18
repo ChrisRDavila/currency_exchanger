@@ -10,7 +10,6 @@ function getRates(type, amount) {
     .then(function(response) {
       if (response.result) {
         useInput(response, type, amount)
-        // printElements(response, amount, type);
       } else {
         printError(response);
       }
@@ -40,7 +39,8 @@ function printElements(response, amount, type, resultAmount) {
 }
 
 function printError(error) {
-  document.querySelector('#show-results').innerText = `There was an error accessing the data from exchange rate API ${error}`;
+  document.querySelector('#show-results').innerText = `There was an error accessing the data from exchange rate API
+  ${error}`;
 }
 
 function handleFormSubmission(event) {
