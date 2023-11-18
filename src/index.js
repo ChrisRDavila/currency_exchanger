@@ -1,6 +1,6 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './css/styles.css'
+import './css/styles.css';
 import Exchange from "./sevices/Exchange-service"; 
 
 //business Logic
@@ -9,7 +9,7 @@ function getRates(type, amount) {
   Exchange.getExchangeAPI(type, amount)
     .then(function(response) {
       if (response.result) {
-        useInput(response, type, amount)
+        useInput(response, type, amount);
       } else {
         printError(response);
       }
