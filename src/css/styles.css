@@ -41,15 +41,15 @@ h1 {
   border-radius: 100px;
 }
 pre {
-  color:cadetblue;
+  color:darkslategray;
   font-style: unset;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 80%;
   background-color: bisque;
   background-image: url('../img/flags2.jpeg');
-  background-size: cover;
+  /* background-size: cover; */
   background-position: center;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-attachment: fixed;
 }
 
